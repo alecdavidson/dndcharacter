@@ -1,0 +1,17 @@
+16
+Paladin
+Warrior
+Ranger
+Monk
+Barbarian
+Spellsword
+Necromancer
+Illusionist
+Mage
+Bard
+Thief
+Cleric
+Druid
+Shaman
+Priest
+MagicUser

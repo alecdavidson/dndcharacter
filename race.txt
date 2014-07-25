@@ -1,0 +1,17 @@
+16
+Human
+Elf
+Dwarf
+Halfling
+Orc
+Gnome
+Goblin
+Banshee
+Satyr
+Lorosz
+Lycan
+Crystallite
+Avian
+Seafolk
+Ethral
+Changeling

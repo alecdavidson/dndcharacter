@@ -1,0 +1,10 @@
+9
+Lawful Good
+Neutral Good
+Chatoic Good
+Lawful Neutral
+True Neutral
+Chatoic Neutral
+Lawful Evil
+Neutral Evil
+Chaotic Evil
