@@ -2,7 +2,7 @@
 
 import random, re
 
-def getRandomLine(rsv):                 # GetRandomLine code created my David. Those comments were his.
+def getRandomLine(rsv):                 # GetRandomLine code created by David. Those comments were his.
     file_h = open(rsv)                  #a file handle for the .txt in question
     limit = file_h.readline()           #the number of lines to search per the .txt
     limit = limit.replace('\n', '' )    #trim the return character
