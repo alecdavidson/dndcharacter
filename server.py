@@ -1,5 +1,5 @@
 ##Alec Davidson - Summer 2014
-import flask, flask.views, dnd_main
+import flask, flask.views, os, dnd_main
 
 app = flask.Flask(__name__)
 
