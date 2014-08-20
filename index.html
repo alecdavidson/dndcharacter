@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Factual Turtle Twitter bot</title>
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <script>
+        var sendTweet=function(tweetHandle){
+          $.post('Tweeter.py', {turtle: tweetHandle})
+          .done(function(){
+            console.log('', 'success: sent '+tweetHandle);
+            window.alert('OK! Now go check Twitter!');})
+            .fail(function(jqXHR, textStatus, errorThrown){
+              console.log(textStatus, errorThrown);
+            });
+          };
+        
+      </script>
+    </head>
+    <body style="background: url(turtle.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;">
+    
+      <div class="row" style="background-color: rgb(250, 240, 225)">
+        <div class="col-md-5"> </div>
+        <div class="col-md-3" >
+          <h1>Hello, <a href="https://www.youtube.com/watch?v=-Zf8t-uAzhk">Franklin!</a></h1>
+          <p class="lead">Enter your twitter handle!</p>
+          <form class="form-inline" role="form">
+            <div class="form-group">
+              <input type="twitter" class="form-control" id="twitterInput" placeholder="@username">
+              <button type="button" id="loading-example-btn" data-loading-text="Loading..." class="btn btn-primary" onclick="sendTweet($('#twitterInput').val())">
+  Get Turtled
+</button>
+
+              <br><br>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap.min.js"></script>
+
+  </body>
+  </html>
