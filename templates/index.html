@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DND Character Randomizer</title> 
+	</head>
+	<body>
+		Generate how many characters? (There are 11 different class options with no repeats unless 12+ characters are chosen)
+		<form action="/" method="post">
+			<input type="text" name="party" />
+			<p>
+			Re-Roll Stats under 10? (yes/no)
+			</p>
+			<input type="text" name="reroll" />
+			<input type="submit" name="Randomize" />
+		</form>
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+				Results:
+				<pre>
+					{% for message in messages %}
+{{message}}
+					{% endfor %}
+				</pre>
+			{% endif %}
+		{% endwith %}
+	</body>
+<p>
+Contact Alec at <a href="mailto:alecdavidson@nau.edu">alecdavidson@nau.edu</a>
+</p>
+</html>
