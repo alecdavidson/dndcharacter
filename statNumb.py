@@ -17,7 +17,7 @@ def statRand(reroll):                   # This is used to generate random stats 
     for i in range(0,3):
         total += totalList[i]
     
-    if reroll.lower() = "yes":# If wanted all totals under 10 will be rerolled
+    if reroll.lower() == "yes":# If wanted all totals under 10 will be rerolled
         if total < 10:
             return statRand(reroll)
     
