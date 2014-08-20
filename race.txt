@@ -8,3 +8,14 @@ Half-Orc
 Halfling
 Turtle
 Skeleton
+Goblin
+Banshee
+Satyr
+Lorosz
+Lycan
+Crystallite
+Avian
+Seafolk
+Ethral
+Changeling
+Bear
