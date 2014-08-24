@@ -10,11 +10,11 @@ class View(flask.views.MethodView):
     return flask.render_template('index.html')
   
   def post(self):
-	party = str(flask.request.form['party'])
-	reroll = str(flask.request.form['reroll'])
+    party = str(flask.request.form['party'])
+    reroll = str(flask.request.form['reroll'])
 
-	dnd_main.start(party,reroll)
-	return self.get()
+    dnd_main.start(party,reroll)
+    return self.get()
   
 app.add_url_rule('/', view_func=View.as_view('main'), methods=['GET','POST'])
 

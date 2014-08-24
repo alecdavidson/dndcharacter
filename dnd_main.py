@@ -9,6 +9,7 @@ classCount = dndcharacter.classCount()  # Obtain the number of classes that are 
 
 race = ""
 race2 = ""
+race3 = "none"
 clas = ""
 align = ""
 trait1 = ""
@@ -21,18 +22,21 @@ def is_number(s):                       # This function will be used to make sur
     except ValueError:
         return False
 
-def classCheck():                       # This function is used to make sure the randomly chosen class has not alredy been used, if it has a new one will be chosen
+def classCheck():                       # This function is used to make sure the randomly chosen class has not already been used, if it has a new one will be chosen
     global classList, clas
     if clas in classList:
         clas = dndcharacter.getClass()
         classCheck()
 
 def reset():                            # All traits are saved and the same character is printed out X times, a reset function fixes this by ensuring everything is re-randomly selected
-    global stats, charStats, race, clas, align, race2, trait1, trait2
+    global stats, charStats, race, race2, clas, align, trait1, trait2
     
     stats = []
     charStats = [0,0,0,0,0,0]
-    race = dndcharacter.getRace()       # Use the dndcharacter file to obtain the different elements of a character
+    if race3 == "none":
+	race = dndcharacter.getRace()       # Use the dndcharacter file to obtain the different elements of a character
+    else:
+	race = race3
     clas = dndcharacter.getClass()
     classCheck()
     align = dndcharacter.getAlign(clas)
@@ -77,7 +81,7 @@ def raceStat(race):                     # This will change the character stat to
     elif race == "Skeleton":             # And to Michael just because
         charStats = [2,2,2,2,2,5]
 
-def main(reroll):                  # This is the main function, the one that actually gets called by the user
+def main(reroll):                  	# This is the main function, the one that actually gets called by the user
     reset()                             # First reset the variables to ensure everything is fresh
     global race
     for i in range(6):                  # Generate the six stats (the reroll determines whether or not stats below 10 should be rerolled)
@@ -233,11 +237,16 @@ def printChar():                        # The pretty part, this prints everythin
         classList = []
 
 def start(party,reroll):
-    if is_number(party):  
+
+    if is_number(party):
+	if party < 0:
+	    race = "skeleton"
+	    party = abs(party)
+	    main(reroll)
         for i in range(int(party)):
             main(reroll)
     else:
-        main(reroll)
+	main(reroll)
 
                                         # This asks for the size of the party
 #party = raw_input("Generate how many characters? (There are "+str(classCount)+" different class options)\n")
