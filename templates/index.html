@@ -7,14 +7,14 @@
 			#sidebar {
 				position:absolute;
 				top:0; bottom:0; left:0;
-				border:1px solid #000; width:150px; height:80px
+				border:1px solid #000; width:150px; height:140px
 			}
 			#content { 
-				border:1px solid #fff; width:500px;
+				border:1px solid #fff; width:400px;
 				margin:5px 0 5px 0;
 			}
 			#footer {
-				border:1px solid #fff; width:500px;
+				border:1px solid #fff; width:400px;
 				margin:5px 0 5px 0;
 			}
 		</style>
@@ -24,6 +24,8 @@
 	<div class="container" align="center">
 		<div id="sidebar" align="sidebar">
 			<a href="{{ url_for('static', filename='traits.txt') }}">List of traits</a>
+			<p>
+			<a href="{{ url_for('static', filename='race.txt') }}">List of races and their stat bonuses</a>
 			<p>
 			<a href="mailto:alecdavidson@nau.edu">Contact Alec at alecdavidson@nau.edu</a>
 		</div>

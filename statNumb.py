@@ -9,12 +9,9 @@ def statRand(reroll):                   # This is used to generate random stats 
     
     for i in range(1,5):                # Four six sided dice
         totalList.append(random.randrange(1,7))
-        print(totalList)
     
     totalList.sort()
-    print(totalList)
     totalList.pop(0)                     # Remove the smallest
-    print(totalList)
     
     for i in range(0,3):
         total += totalList[i]
@@ -24,5 +21,3 @@ def statRand(reroll):                   # This is used to generate random stats 
             return statRand(reroll)
     
     return total
-
-print(statRand("yes"))

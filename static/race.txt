@@ -1,0 +1,9 @@
+Race		[Str, Dex, Con, Int, Wis, Cha]
+
+Human		[0, 0, 0, 0, 0, 0]
+Dwarf		[0, 0, 2, 0, 0, -2]
+Elf		[0, 2, -2, 0, 0, 0]
+Gnome		[-2, 0, 2, 0, 0, 0]
+Half-Elf	[0, 0, 0, 0, 0, 0]
+Half-Orc	[2, 0, 0, -2, 0, -2]
+Halfling	[-2, 2, 0, 0, 0, 0]
