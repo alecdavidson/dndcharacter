@@ -5,61 +5,66 @@
 		<style>
 			.container { position:relative; padding:0 0 0 55px; }
 			#sidebar {
-				position:absolute;
+				float: left;
 				top:0; bottom:0; left:0;
-				border:1px solid #000; width:150px; height:140px
+				border:1px solid #fff; width:150px; height:140px
 			}
 			#content { 
-				border:1px solid #fff; width:400px;
+				border:1px solid #fff; width:600px;
+				background: #fff;
 				margin:5px 0 5px 0;
 			}
-			#footer {
-				border:1px solid #fff; width:400px;
+			#footer { 
+				border:1px solid #fff; width:100px;
 				margin:5px 0 5px 0;
 			}
 		</style>
 	</head>
 	<body>
-	<br>
-	<div class="container" align="center">
-		<div id="sidebar" align="sidebar">
-			<a href="{{ url_for('static', filename='traits.txt') }}">List of traits</a>
-			<p>
-			<a href="{{ url_for('static', filename='race.txt') }}">List of races and their stat bonuses</a>
-			<p>
-			<a href="mailto:alecdavidson@nau.edu">Contact Alec at alecdavidson@nau.edu</a>
-		</div>
-		<div id="content" align="center">
-			Generate how many characters?
-			(There are 11 different class options, repeats allowed on parties 12+)
-			<form action="/" method="post">
-				<input type="text" name="party" />
+		
+		<div class="container" align="center">
+
+			<div id="sidebar" align="sidebar">
+				<a href="{{ url_for('static', filename='traits.txt') }}">List of traits</a>
 				<p>
-				Re-Roll Stats under 10? (yes/no)
-				</p>
-				<input type="text" name="reroll" />
-				<br>
-				<br>
-				<button type="submit" name="Randomize">Generate</button>
-				<br>
-				<br>
-			{% with messages = get_flashed_messages() %}
-				{% if messages %}
-					Results:
-					<pre>
-						{% for message in messages %}
+				<a href="{{ url_for('static', filename='race.txt') }}">List of races and their stat bonuses</a>
+				<p>
+				<a href="mailto:alecdavidson@nau.edu">Contact Alec at alecdavidson@nau.edu</a>
+			</div>
+			
+			<div id="content" align="center">
+				Generate how many characters?
+				(There are 11 different class options, repeats allowed on parties 12+)
+				<form action="/" method="post">
+					<input type="text" name="party" />
+					<p>
+					Re-Roll Stats under 10? (yes/no)
+					</p>
+					<input type="text" name="reroll" />
+					<br>
+					<br>
+					<button type="submit" name="Randomize">Generate</button>
+					<br>
+					<br>
+					<br>
+				{% with messages = get_flashed_messages() %}
+					{% if messages %}
+						Results:
+						<pre>
+							{% for message in messages %}
 {{message}}
-						{% endfor %}
-					</pre>
-				{% endif %}
-			{% endwith %}
+							{% endfor %}
+						</pre>
+					{% endif %}
+				{% endwith %}
+				</form>
+			</div>
+			
 			<div id="footer" align="center">
 				<a href="#top">Back to Top</a>
 				<p>
 			</div>
-			</form>
 			
-		</div>
 		</div>
 	</body>
 </html>
