@@ -230,6 +230,7 @@ def printChar():                        # The pretty part, this prints everythin
     flask.flash("Traits: " + trait1 + ", " + trait2)
     flask.flash("Stats: " + str(textAdd(statAdd(charStats,clasAdd(stats,clas))))) # Takes the random stats and changes the order to fit the class, adds the race bonuses, and adds text for readability.
     flask.flash("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+    flask.flash("")
     
     classList.append(clas)
     
