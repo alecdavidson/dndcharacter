@@ -3,6 +3,8 @@ import flask, flask.views, os, dnd_main
 
 app = flask.Flask(__name__)
 
+app.secret_key = "GenericKey" #figure out how to hide this or something idk probs not important for this project
+
 class View(flask.views.MethodView):
   def get(self):
     return flask.render_template('index.html')
