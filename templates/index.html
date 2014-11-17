@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>DND Character Randomiser</title> 
+		<title>DND Character Randomizer</title>
 		<style>
 			.container { position:relative; padding:0 0 0 55px; }
 			#sidebar {
@@ -36,12 +36,14 @@
 				Generate how many characters?
 				(There are 11 different class options, repeats allowed on parties 12+)
 				<form action="/" method="post">
+                    <p>
 					<input type="text" name="party" />
+                    </p>
 					<p>
 					Re-Roll Stats under 10?
 					</p>
 					<div style="width:50px; text-align:left">
-					<input type="radio" name="reroll" value="yes"> Yes
+					<input type="radio" name="reroll" value="yes" checked> Yes
 					<br>
 					<input type="radio" name="reroll" value="no"> No
 					</div>
