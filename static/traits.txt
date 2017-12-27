@@ -71,7 +71,7 @@
 71. Light-Sensitive Eyes
 72. Heals Quickly
 73. Fear of Spiders
-74. Lucky
+74. DM's Favor
 75. Hates Blood
 76. Always Hungry
 77. No Sense Of Humour
@@ -84,7 +84,7 @@
 84. Forgiving
 85. Obvious Birthmark
 86. Hoarder
-87. Likes To Pretend They're Dying
+87. DM's Disdain
 88. Eats Money
 89. Allergic To Animal Hair
 90. Sneezes When They Lie
@@ -98,3 +98,4 @@
 98. No Concept Of Time
 99. No One Can Tell If You're Serious/Sarcastic
 100. Cassandra's Curse
+101. Never Quits
