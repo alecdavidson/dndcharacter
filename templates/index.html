@@ -55,9 +55,66 @@
 				{% with messages = get_flashed_messages() %}
 					{% if messages %}
 						Results:
-						<pre>
+						<pre align="left">
 							{% for message in messages %}
-{{message}}
+
+{{message[0]['Field']}}
+	{{message[0]['Value']}}
+{{message[1]['Field']}}
+	{{message[1]['Value']}}
+{{message[2]['Field']}}
+	{{message[2]['Value']}}
+{{message[3]['Field']}}
+	{{message[3]['Value']}}
+{{message[4]['Field']}}
+	{{message[4]['Value']}}
+
+<!---
+<table>
+<tr>
+<td>{{message[0]['Field']}}</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>{{message[0]['Value']}}</td>
+</tr>
+<tr>
+<td>{{message[1]['Field']}}</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>{{message[1]['Value']}}</td>
+</tr>
+<tr>
+<td>{{message[2]['Field']}}</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>{{message[2]['Value']}}</td>
+</tr>
+<tr>
+<td>{{message[3]['Field']}}</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>{{message[3]['Value']}}</td>
+</tr>
+<tr>
+<td>{{message[4]['Field']}}</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>{{message[4]['Value']}}</td>
+</tr>
+</table>
+--->
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 							{% endfor %}
 						</pre>
 					{% endif %}
