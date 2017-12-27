@@ -1,4 +1,4 @@
-100
+101
 Heavy Sleeper
 Has Tattoos
 Has Scars
@@ -99,3 +99,4 @@ Thinks They're Better At Singing Than They Really Are
 No Concept Of Time
 No One Can Tell If You're Serious/Sarcastic
 Cassandra's Curse
+Never Quits
