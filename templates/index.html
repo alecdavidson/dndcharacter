@@ -39,14 +39,38 @@
                     <p>
 					<input type="text" name="party" />
                     </p>
+					<table>
+					<td>
 					<p>
 					Re-Roll Stats under 10?
 					</p>
-					<div style="width:50px; text-align:left">
+					<div style="width:50px; text-align:left;align:center">
 					<input type="radio" name="reroll" value="yes" checked> Yes
 					<br>
 					<input type="radio" name="reroll" value="no"> No
 					</div>
+					</td>
+					<td>
+					</td>
+					<td>
+					</td>
+					<td>
+					</td>
+					<td>
+					</td>
+					<td>
+					</td>
+					<td>
+					<p>
+					Roll Fate Core instead?
+					</p>
+					<div style="width:50px; text-align:left">
+					<input type="radio" name="fate" value="yes"> Yes
+					<br>
+					<input type="radio" name="fate" value="no" checked> No
+					</div>
+					</td>
+					</table>
 					<br>
 					<button type="submit" name="Randomize">Generate</button>
 					<br>
@@ -58,6 +82,7 @@
 						<pre align="left">
 							{% for message in messages %}
 
+<table float:left>
 {{message[0]['Field']}}
 	{{message[0]['Value']}}
 {{message[1]['Field']}}
@@ -68,7 +93,17 @@
 	{{message[3]['Value']}}
 {{message[4]['Field']}}
 	{{message[4]['Value']}}
-
+</table>
+<table float:left>
+{{message[5]['Field']}}
+	{{message[5]['Value']}}
+{{message[6]['Field']}}
+	{{message[6]['Value']}}
+{{message[7]['Field']}}
+	{{message[7]['Value']}}
+{{message[8]['Field']}}
+	{{message[8]['Value']}}
+</table>
 <!---
 <table>
 <tr>
@@ -113,7 +148,6 @@
 </tr>
 </table>
 --->
-
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 							{% endfor %}
 						</pre>
