@@ -49,14 +49,14 @@ def reset(fate):
 	align = dndcharacter.getAlign(clas)
 	race2 = race
 	traitList = []
-	trait1 = dndcharacter.getTrait()
-	trait2 = dndcharacter.getTrait()
-	highConcept = dndcharacter.getTrait()
-	trouble = dndcharacter.getTrait()
-	greatSkill = dndcharacter.getTrait()
-	goodSkill = dndcharacter.getTrait()
-	fairSkill = dndcharacter.getTrait()
-	averageSkill = dndcharacter.getTrait()
+	trait1 = dndcharacter.getTrait('traits')
+	trait2 = dndcharacter.getTrait('traits')
+	highConcept = dndcharacter.getTrait('HighConcepts')
+	trouble = dndcharacter.getTrait('Trouble')
+	greatSkill = dndcharacter.getTrait('Convictions')
+	goodSkill = dndcharacter.getTrait('Expertise')
+	fairSkill = dndcharacter.getTrait('Expertise')
+	averageSkill = dndcharacter.getTrait('Expertise')
 	
 def traitCheck():
 	global traitList, trait1, trait2, highConcept, trouble, greatSkill, goodSkill, fairSkill, averageSkill
@@ -64,31 +64,31 @@ def traitCheck():
 	traitList.append(trait1)
 	
 	while trait2 in traitList:
-		trait2 = dndcharacter.getTrait()
+		trait2 = dndcharacter.getTrait('traits')
 	traitList.append(trait2)
 	
 	while highConcept in traitList:
-		highConcept = dndcharacter.getTrait()
+		highConcept = dndcharacter.getTrait('HighConcepts')
 	traitList.append(highConcept)
 	
 	while trouble in traitList:
-		trouble = dndcharacter.getTrait()
+		trouble = dndcharacter.getTrait('Trouble')
 	traitList.append(trouble)
 	
 	while greatSkill in traitList:
-		greatSkill = dndcharacter.getTrait()
+		greatSkill = dndcharacter.getTrait('Convictions')
 	traitList.append(greatSkill)
 	
 	while goodSkill in traitList:
-		goodSkill = dndcharacter.getTrait()
+		goodSkill = dndcharacter.getTrait('Expertise')
 	traitList.append(goodSkill)
 	
 	while fairSkill in traitList:
-		fairSkill = dndcharacter.getTrait()
+		fairSkill = dndcharacter.getTrait('Expertise')
 	traitList.append(fairSkill)
 	
 	while averageSkill in traitList:
-		averageSkill = dndcharacter.getTrait()
+		averageSkill = dndcharacter.getTrait('Expertise')
 	traitList.append(averageSkill)
 	
 
