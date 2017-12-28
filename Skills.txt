@@ -1,0 +1,36 @@
+35
+Acrobatics
+Arcana
+Athletics
+Bluff
+Diplomacy
+Dungeoneering
+Endurance
+Heal
+History
+Insight
+Intimidate
+Nature
+Perception
+Religion
+Stealth
+Streetwise
+Thievery
+Archery
+Allure
+Wealth
+Armed Combat
+Authority
+Craft
+Might
+Deception
+Sailing
+Entertain
+Sneaking
+Nature (Lore)
+Oratory
+Perception
+Wrestling
+Religion (Lore)
+Resolve (Will)
+Underworld Magic (Lore)

@@ -53,10 +53,10 @@ def reset(fate):
 	trait2 = dndcharacter.getTrait('traits')
 	highConcept = dndcharacter.getTrait('HighConcepts')
 	trouble = dndcharacter.getTrait('Trouble')
-	greatSkill = dndcharacter.getTrait('Convictions')
-	goodSkill = dndcharacter.getTrait('Expertise')
-	fairSkill = dndcharacter.getTrait('Expertise')
-	averageSkill = dndcharacter.getTrait('Expertise')
+	greatSkill = dndcharacter.getTrait('Skills')
+	goodSkill = dndcharacter.getTrait('Skills')
+	fairSkill = dndcharacter.getTrait('Skills')
+	averageSkill = dndcharacter.getTrait('Skills')
 	
 def traitCheck():
 	global traitList, trait1, trait2, highConcept, trouble, greatSkill, goodSkill, fairSkill, averageSkill
