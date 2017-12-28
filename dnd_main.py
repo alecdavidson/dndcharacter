@@ -12,8 +12,15 @@ race2 = ""
 race3 = "none"
 clas = ""
 align = ""
+traitList = []
 trait1 = ""
 trait2 = ""
+highConcept = ""
+trouble = ""
+greatSkill = ""
+goodSkill = ""
+fairSkill = ""
+averageSkill = ""
 
 def is_number(s):
 	try:
@@ -28,8 +35,8 @@ def classCheck():
 		clas = dndcharacter.getClass()
 		classCheck()
 
-def reset():
-	global stats, charStats, race, race2, clas, align, trait1, trait2
+def reset(fate):
+	global stats, charStats, race, race2, clas, align, traitList, trait1, trait2, highConcept, trouble, greatSkill, goodSkill, fairSkill, averageSkill
 	
 	stats = []
 	charStats = [0,0,0,0,0,0]
@@ -41,24 +48,52 @@ def reset():
 	classCheck()
 	align = dndcharacter.getAlign(clas)
 	race2 = race
+	traitList = []
 	trait1 = dndcharacter.getTrait()
 	trait2 = dndcharacter.getTrait()
-
-def traitCheck():
-	global trait1, trait2
+	highConcept = dndcharacter.getTrait()
+	trouble = dndcharacter.getTrait()
+	greatSkill = dndcharacter.getTrait()
+	goodSkill = dndcharacter.getTrait()
+	fairSkill = dndcharacter.getTrait()
+	averageSkill = dndcharacter.getTrait()
 	
-	if trait2 == trait1:
+def traitCheck():
+	global traitList, trait1, trait2, highConcept, trouble, greatSkill, goodSkill, fairSkill, averageSkill
+	
+	traitList.append(trait1)
+	
+	while trait2 in traitList:
 		trait2 = dndcharacter.getTrait()
-		traitCheck()
-## Note to self, get rid of all these
-##   if statements and make it look nicer
-##   more text files? py files? functions?
-if race == "Half-Elf":
-	race2 = "Half-Elf"
-	race = "HalfElf"
-elif race == "Half-Orc":
-	race2 = "Half-Orc"
-	race = "HalfOrc"
+	traitList.append(trait2)
+	
+	while highConcept in traitList:
+		highConcept = dndcharacter.getTrait()
+	traitList.append(highConcept)
+	
+	while trouble in traitList:
+		trouble = dndcharacter.getTrait()
+	traitList.append(trouble)
+	
+	while greatSkill in traitList:
+		greatSkill = dndcharacter.getTrait()
+	traitList.append(greatSkill)
+	
+	while goodSkill in traitList:
+		goodSkill = dndcharacter.getTrait()
+	traitList.append(goodSkill)
+	
+	while fairSkill in traitList:
+		fairSkill = dndcharacter.getTrait()
+	traitList.append(fairSkill)
+	
+	while averageSkill in traitList:
+		averageSkill = dndcharacter.getTrait()
+	traitList.append(averageSkill)
+	
+
+race2 = race
+race = race2.replace("-","")
 
 def raceStat(race):
 	global charStats
@@ -81,8 +116,8 @@ def raceStat(race):
 	elif race == "Skeleton":
 		charStats = [2,2,2,2,2,5]
 
-def main(reroll):
-	reset()
+def main(reroll,fate):
+	reset(fate)
 	global race
 	for i in range(6):
 		stats.append(statNumb.statRand(reroll))
@@ -93,7 +128,7 @@ def main(reroll):
 	
 	raceStat(race)
 	
-	printChar()
+	printChar(fate)
 
 def clasAdd(stat,clas):
 	stat.sort()
@@ -212,8 +247,8 @@ def textAdd(stat):
 	
 	return statFin
 
-def printChar():
-	global classList, stats, charStats, clas, align, race2, trait1, trait2
+def printChar(fate):
+	global classList, stats, charStats, clas, align, race2, trait1, trait2, highConcept, trouble, greatSkill, goodSkill, fairSkill, averageSkill
 
 	#if save:
 	#	chartxt = open("chartxt.txt", "a")
@@ -227,8 +262,12 @@ def printChar():
 	#else:
 	
 #	flask.flash("Alignment: \n\t" + align + "\nRace: \n\t" + race2 + "\nClass: \n\t" + clas + "\nTraits: \n\t" + trait1 + ", " + trait2 + "\nStats: \n\t" + str(textAdd(statAdd(charStats,clasAdd(stats,clas)))))
-
-	Details = [{'Field':"Alignment:", 'Value':align}, {'Field':"Race:", 'Value':race2}, {'Field':"Class:", 'Value':clas}, {'Field':"Traits:", 'Value':trait1 + ", " + trait2}, {'Field':"Stats:", 'Value':str(textAdd(statAdd(charStats,clasAdd(stats,clas))))}]
+	if fate=="yes":
+		Details = [{'Field':"Alignment:", 'Value':align}, {'Field':"Race:", 'Value':race2}, {'Field':"Class:", 'Value':clas}, {'Field':"High Concept:", 'Value':highConcept}, {'Field':"Trouble:", 'Value':trouble}, {'Field':"Great Skill (+4):", 'Value':greatSkill}, {'Field':"Good Skill (+3):", 'Value':goodSkill}, {'Field':"Fair Skill (+2):", 'Value':fairSkill}, {'Field':"Average Skill (+1):", 'Value':averageSkill}]
+	else:
+		Details = [{'Field':"Alignment:", 'Value':align}, {'Field':"Race:", 'Value':race2}, {'Field':"Class:", 'Value':clas}, {'Field':"Traits:", 'Value':trait1 + ", " + trait2}, {'Field':"Stats:", 'Value':str(textAdd(statAdd(charStats,clasAdd(stats,clas))))}, {'Field':"", 'Value':''}, {'Field':"", 'Value':''}, {'Field':"", 'Value':''}, {'Field':"", 'Value':''}]
+	
+	
 #	flask.flash("Alignment: \n\t" + align + "\nRace: \n\t" + race2 + "\nClass: \n\t" + clas + "\nTraits: \n\t" + trait1 + ", " + trait2 + "\nStats: \n\t" + str(textAdd(statAdd(charStats,clasAdd(stats,clas)))))
 	flask.flash(Details)
 	
@@ -237,28 +276,29 @@ def printChar():
 	if len(classList)%classCount == 0:
 		classList = []
 
-def start(party,reroll):
+def start(party,reroll,fate):
 	global race3
 
 	if is_number(party):
 		party = int(party)
-		if party < 0:
-			party = abs(party)
-			for i in range(int(party)):
-				race3 = "skeleton"
-				main(reroll)
-		elif party == 420:
-			party = 1
-			for i in range(int(party)):
-				race3 = "Turtle"
-				main(reroll)
-		else:
-			race3 = "none"
-			for i in range(int(party)):
-				main(reroll)
 	else:
 		race3 = "none"
-		main(reroll)
+		party = 1
+	
+	if party < 0:
+		party = abs(party)
+		for i in range(int(party)):
+			race3 = "skeleton"
+			main(reroll,fate)
+	elif party == 420:
+		party = 1
+		for i in range(int(party)):
+			race3 = "Turtle"
+			main(reroll)
+	else:
+		race3 = "none"
+		for i in range(int(party)):
+			main(reroll,fate)
 
 										# This asks for the size of the party
 #party = raw_input("Generate how many characters? (There are "+str(classCount)+" different class options)\n")
