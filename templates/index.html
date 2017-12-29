@@ -19,6 +19,18 @@
 				margin:5px 0 5px 0;
 			}
 		</style>
+		<script>
+			function setClipboard(value) {
+				var value = value.replace(/&#39;/g,"'");
+				var tempInput = document.createElement("input");
+				tempInput.style = "position: absolute; left: -1000px; top: -1000px";
+				tempInput.value = value;
+				document.body.appendChild(tempInput);
+				tempInput.select();
+				document.execCommand("copy");
+				document.body.removeChild(tempInput);
+			}
+		</script>
 	</head>
 	<body>
 		
@@ -72,7 +84,7 @@
 					</td>
 					</table>
 					<br>
-					<button type="submit" name="Randomize">Generate</button>
+					<button type="submit" name="Randomize" name="GenerateButton">Generate</button>
 					<br>
 					<br>
 					<br>
@@ -137,57 +149,23 @@
 <td>{{message[11]['Field']}}
 	{{message[11]['Value']}}</td>
 </tr>
-</table>
-<!---
-<table>
 <tr>
-<td>{{message[0]['Field']}}</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>{{message[0]['Value']}}</td>
-</tr>
-<tr>
-<td>{{message[1]['Field']}}</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>{{message[1]['Value']}}</td>
-</tr>
-<tr>
-<td>{{message[2]['Field']}}</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>{{message[2]['Value']}}</td>
-</tr>
-<tr>
-<td>{{message[3]['Field']}}</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>{{message[3]['Value']}}</td>
-</tr>
-<tr>
-<td>{{message[4]['Field']}}</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>{{message[4]['Value']}}</td>
+	<td></td>
+	<td>
+	<script>
+	var TextToCopy = '{{message[0]['Value']}} {{message[1]['Value']}} {{message[2]['Value']}} {{message[3]['Value']}} {{message[4]['Value']}} {{message[5]['Value']}}'
+	</script>
+	</td>
 </tr>
 </table>
---->
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 							{% endfor %}
 						</pre>
 					{% endif %}
 				{% endwith %}
 				</form>
+	<!-- The button used to copy the text -->
+				<button id="copyButton" onclick="setClipboard(TextToCopy)">Copy Last Character</button>
 			</div>
 			
 			<div id="footer" align="center">
