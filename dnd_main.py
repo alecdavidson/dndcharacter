@@ -15,12 +15,14 @@ align = ""
 traitList = []
 trait1 = ""
 trait2 = ""
+trait3 = ""
 highConcept = ""
 trouble = ""
 greatSkill = ""
 goodSkill = ""
 fairSkill = ""
 averageSkill = ""
+poorSkill = ""
 
 def is_number(s):
 	try:
@@ -36,7 +38,7 @@ def classCheck():
 		classCheck()
 
 def reset(fate):
-	global stats, charStats, race, race2, clas, align, traitList, trait1, trait2, highConcept, trouble, greatSkill, goodSkill, fairSkill, averageSkill
+	global stats, charStats, race, race2, clas, align, traitList, trait1, trait2, trait3, highConcept, trouble, greatSkill, goodSkill, fairSkill, averageSkill, poorSkill
 	
 	stats = []
 	charStats = [0,0,0,0,0,0]
@@ -51,21 +53,27 @@ def reset(fate):
 	traitList = []
 	trait1 = dndcharacter.getTrait('traits')
 	trait2 = dndcharacter.getTrait('traits')
+	trait3 = dndcharacter.getTrait('traits')
 	highConcept = dndcharacter.getTrait('HighConcepts')
 	trouble = dndcharacter.getTrait('Trouble')
 	greatSkill = dndcharacter.getTrait('Skills')
 	goodSkill = dndcharacter.getTrait('Skills')
 	fairSkill = dndcharacter.getTrait('Skills')
 	averageSkill = dndcharacter.getTrait('Skills')
+	poorSkill = dndcharacter.getTrait('Skills')
 	
 def traitCheck():
-	global traitList, trait1, trait2, highConcept, trouble, greatSkill, goodSkill, fairSkill, averageSkill
+	global traitList, trait1, trait2, trait3, highConcept, trouble, greatSkill, goodSkill, fairSkill, averageSkill, poorSkill
 	
 	traitList.append(trait1)
 	
 	while trait2 in traitList:
 		trait2 = dndcharacter.getTrait('traits')
 	traitList.append(trait2)
+	
+	while trait3 in traitList:
+		trait3 = dndcharacter.getTrait('traits')
+	traitList.append(trait3)
 	
 	while highConcept in traitList:
 		highConcept = dndcharacter.getTrait('HighConcepts')
@@ -90,6 +98,10 @@ def traitCheck():
 	while averageSkill in traitList:
 		averageSkill = dndcharacter.getTrait('Expertise')
 	traitList.append(averageSkill)
+	
+	while poorSkill in traitList:
+		poorSkill = dndcharacter.getTrait('Expertise')
+	traitList.append(poorSkill)
 	
 
 race2 = race
@@ -248,7 +260,7 @@ def textAdd(stat):
 	return statFin
 
 def printChar(fate):
-	global classList, stats, charStats, clas, align, race2, trait1, trait2, highConcept, trouble, greatSkill, goodSkill, fairSkill, averageSkill
+	global classList, stats, charStats, clas, align, race2, trait1, trait2, trait3, highConcept, trouble, greatSkill, goodSkill, fairSkill, averageSkill, poorSkill
 
 	#if save:
 	#	chartxt = open("chartxt.txt", "a")
@@ -269,11 +281,12 @@ def printChar(fate):
 		{'Field':"Class:", 'Value':clas},
 		{'Field':"High Concept:", 'Value':highConcept},
 		{'Field':"Trouble:", 'Value':trouble},
+		{'Field':'', 'Value':''},
 		{'Field':"Great Skill (+4):", 'Value':greatSkill},
 		{'Field':"Good Skill (+3):", 'Value':goodSkill},
 		{'Field':"Fair Skill (+2):", 'Value':fairSkill},
 		{'Field':"Average Skill (+1):", 'Value':averageSkill},
-		{'Field':'', 'Value':''},
+		{'Field':'Poor Skill (-1)', 'Value':poorSkill},
 		{'Field':'', 'Value':''}]
 	else:
 		StatListing = textAdd(statAdd(charStats,clasAdd(stats,clas)))
@@ -283,6 +296,7 @@ def printChar(fate):
 		{'Field':"Class:", 'Value':clas},
 		{'Field':"Traits:", 'Value':trait1},
 		{'Field':"", 'Value':trait2},
+		{'Field':"", 'Value':trait3},
 		{'Field':"Stats:", 'Value':StatListing[0]},
 		{'Field':"", 'Value':StatListing[1]},
 		{'Field':"", 'Value':StatListing[2]},
