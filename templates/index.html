@@ -22,6 +22,7 @@
 		<script>
 			function setClipboard(value) {
 				var value = value.replace(/&#39;/g,"'");
+				var value = value.replace(/&#34;/g,"\"");
 				var tempInput = document.createElement("input");
 				tempInput.style = "position: absolute; left: -1000px; top: -1000px";
 				tempInput.value = value;
@@ -153,7 +154,7 @@
 	<td></td>
 	<td>
 	<script>
-	var TextToCopy = '{{message[0]['Value']}} {{message[1]['Value']}} {{message[2]['Value']}} {{message[3]['Value']}} {{message[4]['Value']}} {{message[5]['Value']}}'
+		var TextToCopy = "{{message[12]['Value']}}";
 	</script>
 	</td>
 </tr>
