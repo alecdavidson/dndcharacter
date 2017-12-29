@@ -288,7 +288,7 @@ def printChar(fate):
 		{'Field':"Average Skill (+1):", 'Value':averageSkill},
 		{'Field':'Poor Skill (-1)', 'Value':poorSkill},
 		{'Field':'', 'Value':''},
-		{'Field':'', 'Value':align + ', ' + race2 + ' ' + clas + '. ' + highConcept + ' but ' + trouble} + '.']
+		{'Field':'', 'Value':str(align) + ', ' + str(race2) + ' ' + str(clas) + '. ' + str(highConcept) + ' but ' + str(trouble)} + '.']
 	else:
 		StatListing = textAdd(statAdd(charStats,clasAdd(stats,clas)))
 		Details = [
@@ -304,7 +304,7 @@ def printChar(fate):
 		{'Field':"", 'Value':StatListing[3]},
 		{'Field':"", 'Value':StatListing[4]},
 		{'Field':"", 'Value':StatListing[5]},
-		{'Field':'', 'Value':align + ', ' + race2 + ' ' + clas + '. ' + trait1 + ', ' + trait2 + ', and ' + trait3} + '.']
+		{'Field':'', 'Value':str(align) + ', ' + str(race2) + ' ' + str(clas) + '. ' + str(trait1) + ', ' + str(trait2) + ', and ' + str(trait3)} + '.']
 	
 	
 #	flask.flash("Alignment: \n\t" + align + "\nRace: \n\t" + race2 + "\nClass: \n\t" + clas + "\nTraits: \n\t" + trait1 + ", " + trait2 + "\nStats: \n\t" + str(textAdd(statAdd(charStats,clasAdd(stats,clas)))))
