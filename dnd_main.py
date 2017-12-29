@@ -263,9 +263,32 @@ def printChar(fate):
 	
 #	flask.flash("Alignment: \n\t" + align + "\nRace: \n\t" + race2 + "\nClass: \n\t" + clas + "\nTraits: \n\t" + trait1 + ", " + trait2 + "\nStats: \n\t" + str(textAdd(statAdd(charStats,clasAdd(stats,clas)))))
 	if fate=="yes":
-		Details = [{'Field':"Alignment:", 'Value':align}, {'Field':"Race:", 'Value':race2}, {'Field':"Class:", 'Value':clas}, {'Field':"High Concept:", 'Value':highConcept}, {'Field':"Trouble:", 'Value':trouble}, {'Field':"Great Skill (+4):", 'Value':greatSkill}, {'Field':"Good Skill (+3):", 'Value':goodSkill}, {'Field':"Fair Skill (+2):", 'Value':fairSkill}, {'Field':"Average Skill (+1):", 'Value':averageSkill}]
+		Details = [
+		{'Field':"Alignment:", 'Value':align},
+		{'Field':"Race:", 'Value':race2},
+		{'Field':"Class:", 'Value':clas},
+		{'Field':"High Concept:", 'Value':highConcept},
+		{'Field':"Trouble:", 'Value':trouble},
+		{'Field':"Great Skill (+4):", 'Value':greatSkill},
+		{'Field':"Good Skill (+3):", 'Value':goodSkill},
+		{'Field':"Fair Skill (+2):", 'Value':fairSkill},
+		{'Field':"Average Skill (+1):", 'Value':averageSkill},
+		{'Field':'', 'Value':''},
+		{'Field':'', 'Value':''}]
 	else:
-		Details = [{'Field':"Alignment:", 'Value':align}, {'Field':"Race:", 'Value':race2}, {'Field':"Class:", 'Value':clas}, {'Field':"Traits:", 'Value':trait1 + ", " + trait2}, {'Field':"Stats:", 'Value':str(textAdd(statAdd(charStats,clasAdd(stats,clas))))}, {'Field':"", 'Value':''}, {'Field':"", 'Value':''}, {'Field':"", 'Value':''}, {'Field':"", 'Value':''}]
+		StatListing = textAdd(statAdd(charStats,clasAdd(stats,clas)))
+		Details = [
+		{'Field':"Alignment:", 'Value':align},
+		{'Field':"Race:", 'Value':race2},
+		{'Field':"Class:", 'Value':clas},
+		{'Field':"Traits:", 'Value':trait1},
+		{'Field':"", 'Value':trait2},
+		{'Field':"Stats:", 'Value':StatListing[0]},
+		{'Field':"", 'Value':StatListing[1]},
+		{'Field':"", 'Value':StatListing[2]},
+		{'Field':"", 'Value':StatListing[3]},
+		{'Field':"", 'Value':StatListing[4]},
+		{'Field':"", 'Value':StatListing[5]}]
 	
 	
 #	flask.flash("Alignment: \n\t" + align + "\nRace: \n\t" + race2 + "\nClass: \n\t" + clas + "\nTraits: \n\t" + trait1 + ", " + trait2 + "\nStats: \n\t" + str(textAdd(statAdd(charStats,clasAdd(stats,clas)))))
