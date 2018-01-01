@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>DND Character Randomizer</title>
-		<style>
+		<style type="text/css">
 			.container { position:relative; padding:0 0 0 55px; }
 			#sidebar {
 				float: left;
@@ -10,12 +10,32 @@
 				border:1px solid #fff; width:150px; height:140px
 			}
 			#content { 
-				border:1px solid #fff; width:600px;
+				border:1px solid #fff;
+				width:600px;
 				background: #fff;
 				margin:5px 0 5px 0;
 			}
 			#footer { 
-				border:1px solid #fff; width:600px;
+				border:1px solid #fff;
+				width:600px;
+				margin:5px 0 5px 0;
+			}
+			.detail {
+				width:75%;
+				border-bottom:1px solid #000;
+				border-right:1px solid #000;
+				margin:5px 0 5px 0;
+			}
+			.stats {
+				width:25%;
+				border-bottom:1px solid #000;
+				margin:5px 0 5px 0;
+			}
+			.resultstable {
+				table-layout:fixed;
+				border-collapse: collapse;
+				border:1px solid #fff;
+				width:500px;
 				margin:5px 0 5px 0;
 			}
 		</style>
@@ -54,31 +74,21 @@
                     </p>
 					<table>
 					<td>
+					<div style="width:175px; text-align:left;align:center">
 					<p>
 					Re-Roll Stats under 10?
 					</p>
-					<div style="width:75px; text-align:left;align:center">
 					<input type="radio" name="reroll" value="yes" checked> Yes
+					<p>
 					<input type="radio" name="reroll" value="no"> No
 					</div>
-					</td>
 					<td>
-					</td>
-					<td>
-					</td>
-					<td>
-					</td>
-					<td>
-					</td>
-					<td>
-					</td>
-					<td>
+					<div style="width:175px; text-align:left">
 					<p>
 					Roll Fate Core instead?
 					</p>
-					<div style="width:75px; text-align:left">
 					<input type="radio" name="fate" value="yes"> Yes
-					<br>
+					<p>
 					<input type="radio" name="fate" value="no" checked> No
 					</div>
 					</td>
@@ -93,72 +103,62 @@
 						Results:
 						<pre align="left">
 							{% for message in messages %}
-
-<table>
-<colgroup>
-	<col>
-	<col span="2">
-	<col>
-	<col span="2">
-</colgroup>
+<div align="center">
+<table class="resultstable">
 <tr>
-<td>	</td>
-<td>{{message[0]['Field']}}
+<!--<td></td>-->
+<td class="detail">{{message[0]['Field']}}
 	{{message[0]['Value']}}</td>
-<td>	</td>
-<td>{{message[6]['Field']}}
+<!--<td></td>-->
+<td class="stats">{{message[6]['Field']}}
 	{{message[6]['Value']}}</td>
 </tr>
 <tr>
-<td></td>
-<td>{{message[1]['Field']}}
+<!--<td></td>-->
+<td class="detail">{{message[1]['Field']}}
 	{{message[1]['Value']}}</td>
-<td></td>
-<td>{{message[7]['Field']}}
+<!--<td></td>-->
+<td class="stats">{{message[7]['Field']}}
 	{{message[7]['Value']}}</td>
 </tr>
 <tr>
-<td></td>
-<td>{{message[2]['Field']}}
+<!--<td></td>-->
+<td class="detail">{{message[2]['Field']}}
 	{{message[2]['Value']}}</td>
-<td></td>
-<td>{{message[8]['Field']}}
+<!--<td></td>-->
+<td class="stats">{{message[8]['Field']}}
 	{{message[8]['Value']}}</td>
 </tr>
 <tr>
-<td></td>
-<td>{{message[3]['Field']}}
+<!--<td></td>-->
+<td class="detail">{{message[3]['Field']}}
 	{{message[3]['Value']}}</td>
-<td></td>
-<td>{{message[9]['Field']}}
+<!--<td></td>-->
+<td class="stats">{{message[9]['Field']}}
 	{{message[9]['Value']}}</td>
 </tr>
 <tr>
-<td></td>
-<td>{{message[4]['Field']}}
+<!--<td></td>-->
+<td class="detail">{{message[4]['Field']}}
 	{{message[4]['Value']}}</td>
-<td></td>
-<td>{{message[10]['Field']}}
+<!--<td></td>-->
+<td class="stats">{{message[10]['Field']}}
 	{{message[10]['Value']}}</td>
 </tr>
 <tr>
-<td></td>
-<td>{{message[5]['Field']}}
+<!--<td></td>-->
+<td class="detail">{{message[5]['Field']}}
 	{{message[5]['Value']}}</td>
-<td></td>
-<td>{{message[11]['Field']}}
+<!--<td></td>-->
+<td class="stats">{{message[11]['Field']}}
 	{{message[11]['Value']}}</td>
 </tr>
-<tr>
-	<td></td>
-	<td>
-	<script>
-		var TextToCopy = "{{message[12]['Value']}}";
-	</script>
-	</td>
-</tr>
+<script>
+	var TextToCopy = "{{message[12]['Value']}}";
+</script>
 </table>
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+</div>
 							{% endfor %}
 						</pre>
 					{% endif %}
