@@ -1,10 +1,10 @@
 9
 Lawful Good
 Neutral Good
-Chatoic Good
+Chaotic Good
 Lawful Neutral
 True Neutral
-Chatoic Neutral
+Chaotic Neutral
 Lawful Evil
 Neutral Evil
 Chaotic Evil
