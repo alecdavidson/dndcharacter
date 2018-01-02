@@ -33,4 +33,4 @@ Perception
 Wrestling
 Religion (Lore)
 Resolve (Will)
-Underworld Magic (Lore)
+Underworld (Lore)
