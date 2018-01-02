@@ -84,23 +84,23 @@ def traitCheck():
 	traitList.append(trouble)
 	
 	while greatSkill in traitList:
-		greatSkill = dndcharacter.getTrait('Convictions')
+		greatSkill = dndcharacter.getTrait('Skills')
 	traitList.append(greatSkill)
 	
 	while goodSkill in traitList:
-		goodSkill = dndcharacter.getTrait('Expertise')
+		goodSkill = dndcharacter.getTrait('Skills')
 	traitList.append(goodSkill)
 	
 	while fairSkill in traitList:
-		fairSkill = dndcharacter.getTrait('Expertise')
+		fairSkill = dndcharacter.getTrait('Skills')
 	traitList.append(fairSkill)
 	
 	while averageSkill in traitList:
-		averageSkill = dndcharacter.getTrait('Expertise')
+		averageSkill = dndcharacter.getTrait('Skills')
 	traitList.append(averageSkill)
 	
 	while poorSkill in traitList:
-		poorSkill = dndcharacter.getTrait('Expertise')
+		poorSkill = dndcharacter.getTrait('Skills')
 	traitList.append(poorSkill)
 	
 
