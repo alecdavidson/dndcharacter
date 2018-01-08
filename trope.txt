@@ -1,4 +1,4 @@
-1371
+1300
 Abandoned Mascot
 Abandoned War Child
 Abhorrent Admirer
@@ -30,8 +30,6 @@ The Aloner
 Aloof Ally
 Aloof Big Brother
 Alpha Bitch
-Always Chaotic Evil
-Always Lawful Good
 Always Second Best
 Always Someone Better
 Amazon Chaser
@@ -1147,19 +1145,15 @@ Spear Carrier
 Special Guest
 The Speechless
 Spicy Latina
-The Spock
 Spoiled Brat
 Spoiled Sweet
 The Sponsor
-The Spook
 The Spymaster
 The Squire
 Squishy Wizard
 Stacy's Mom
 Stage Magician
 The Starscream
-Stepford Smiler
-Stepford Snarker
 Stern Nun
 Stern Teacher
 Stock Character
@@ -1169,16 +1163,6 @@ The Stool Pigeon
 The Storyteller
 Straight Gay
 The Strategist
-Straw Character (formerly named Strawman Political)
-Straw Critic
-Straw Fan
-Straw Feminist
-Straw Hypocrite
-Straw Misogynist
-Straw Nihilist
-Straw Vegetarian
-Straw Vulcan
-Strawman Ball
 Straying Baby
 Street Musician
 Street Performer
@@ -1194,9 +1178,6 @@ Super Coach
 Super Doc
 Super Gullible
 Super-Stoic Shopkeeper
-Super Strength
-Supernatural-Proof Father
-Superpower Silly Putty
 Support Party Member
 Supporting Leader
 Supporting Protagonist
@@ -1213,42 +1194,20 @@ Tall, Dark, and Snarky
 Tank-Top Tomboy
 Team Chef
 Team Dad
-Team Killer
 Team Mom
 The Team Normal
 Team Prima Donna
 Team Switzerland
 The Team Wannabe
-Teaser-Only Character
 Technical Pacifist
 Techno Wizard
 Teen Genius
 Teens Are Monsters
-The Teetotaler
-Telepathic Spacemen
-Temporary Love Interest
-Temporary Scrappy
-Territorial Smurfette
-There Is Another
 They Killed Kenny Again
 Third-Option Love Interest
-Third-Person Person
-This Loser Is You
 Tin Man
 Tiny-Headed Behemoth
-Token Enemy Minority
-Token Evil Teammate
-Token Good Teammate
-Token Heroic Orc
-Token Human
-Token Mini-Moe
-Token Minority
-Token Nonhuman
-Token Religious Teammate
-Token White
-Token Wholesome
 Tomboy Princess
-Too Clever by Half
 Too Dumb to Fool
 Too Dumb to Live
 Toxic Friend Influence
@@ -1258,16 +1217,10 @@ Trapped by Gambling Debts
 Traveling Salesman
 Trickster Mentor
 Trickster Twins
-Triple Shifter
-Trophy Wife
 Troubled, but Cute
 Tsundere
 Tunnel King
 Turn Coat
-Twofer Token Minority
-Typhoid Mary
-Tyrant Takes the Helm
-Übermensch
 The Ugly Guy's Hot Daughter
 Ultimate Authority Mayor
 Ultimate Blacksmith
@@ -1293,8 +1246,6 @@ Unsympathetic Comedy Protagonist
 Unwitting Instigator of Doom
 Unwitting Pawn
 Up Through the Ranks
-Useless Boyfriend
-Useless Protagonist
 Vain Sorceress
 Valley Girl
 The Vamp
@@ -1302,25 +1253,15 @@ Vampire Refugee
 Vanilla Protagonist
 Very Punchable Man
 The Vicar
-Victim of the Week
-Victimized Bystander
 The Vietnam Vet
-Villain by Default
-Villain of Another Story
-Villainous Glutton
-Violent Glaswegian
 Violently Protective Girlfriend
 The Voice
 The Voiceless
-Voice with an Internet Connection
 Wacky Guy
 Waif Prophet
 Waiting for a Break
 Walking Disaster Area
-Walking Techbane
-Walking Techfix
 War Hawk
-War Reenactors
 Warrior Monk
 Warrior Prince
 Wasteland Elder
@@ -1330,17 +1271,9 @@ We Just Need to Wait for Rescue
 Weekend Inventor
 Weirdness Magnet
 Weirdness Search and Rescue
-"Well Done, Dad!" Guy
-"Well Done, Son!" Guy
-Well-Intentioned Extremist
 Weasel Co-Worker
-Wet Blanket Wife
 What, Exactly, Is His Job?
 While Rome Burns
-White-Dwarf Starlet
-White Magician Girl
-White Man's Burden
-White Sheep
 Wholesome Crossdresser
 Wicked Stepmother
 Wide-Eyed Idealist
@@ -1361,12 +1294,8 @@ The World's Expert on Getting Killed
 The Worm Guy
 Worthless Foreign Degree
 Wrench Wench
-Yamato Nadeshiko
-Yandere
-Yaoi Fangirl
 Yes-Man
 You Taught Me That
 Your Terrorists Are Our Freedom Fighters
-Yuri Fan
 Zombie Advocate
 Zombie Infectee
