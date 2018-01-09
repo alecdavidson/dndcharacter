@@ -53,7 +53,7 @@ def reset(fate):
 	traitList = []
 	trait1 = dndcharacter.getTrait('archetype')
 	trait2 = dndcharacter.getTrait('trope')
-	trait3 = dndcharacter.getTrait('trope')
+	trait3 = dndcharacter.getTrait('traits')
 	highConcept = dndcharacter.getTrait('HighConcepts')
 	trouble = dndcharacter.getTrait('Trouble')
 	greatSkill = dndcharacter.getTrait('Skills')
@@ -72,7 +72,7 @@ def traitCheck():
 	traitList.append(trait2)
 	
 	while trait3 in traitList:
-		trait3 = dndcharacter.getTrait('trope')
+		trait3 = dndcharacter.getTrait('traits')
 	traitList.append(trait3)
 	
 	while highConcept in traitList:
