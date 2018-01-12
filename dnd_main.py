@@ -51,8 +51,8 @@ def reset(fate):
 	align = dndcharacter.getAlign(clas)
 	race2 = race
 	traitList = []
-	trait1 = dndcharacter.getTrait('traits')
-	trait2 = dndcharacter.getTrait('traits')
+	trait1 = dndcharacter.getTrait('archetype')
+	trait2 = dndcharacter.getTrait('trope')
 	trait3 = dndcharacter.getTrait('traits')
 	highConcept = dndcharacter.getTrait('HighConcepts')
 	trouble = dndcharacter.getTrait('Trouble')
@@ -68,7 +68,7 @@ def traitCheck():
 	traitList.append(trait1)
 	
 	while trait2 in traitList:
-		trait2 = dndcharacter.getTrait('traits')
+		trait2 = dndcharacter.getTrait('trope')
 	traitList.append(trait2)
 	
 	while trait3 in traitList:
@@ -315,7 +315,7 @@ def printChar(fate):
 	if len(classList)%classCount == 0:
 		classList = []
 
-def start(party,reroll,fate):
+def start(party, reroll, fate):
 	global race3
 
 	if is_number(party):
