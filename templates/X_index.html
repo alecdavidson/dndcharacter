@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DND Character Randomizer</title>
+		<style type="text/css">
+			.container { position:relative; padding:0 0 0 55px; }
+			#sidebar {
+				float: left;
+				top:0; bottom:0; left:0;
+				border:1px solid #fff;
+				width:150px;
+				position:fixed;
+				z-index: 900;
+			}
+			#content { 
+				border:1px solid #fff;
+				width:600px;
+				background: #fff;
+				margin:5px 0 5px 0;
+				z-index: 950;
+			}
+			#footer { 
+				border:1px solid #fff;
+				width:600px;
+				margin:5px 0 5px 0;
+			}
+			.detail {
+				width:70%;
+				border-bottom:1px solid #000;
+				border-right:1px solid #000;
+				margin:5px 0 5px 0;
+			}
+			.stats {
+				border-bottom:1px solid #000;
+				margin:5px 0 5px 0;
+			}
+			.resultstable {
+				table-layout:fixed;
+				border-collapse: collapse;
+				border:1px solid #fff;
+				background-color: #fff;
+				width:500px;
+				margin:5px 0 5px 0;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+			<!--Copy Button-->
+			function setClipboard(value) {
+				var value = value.replace(/&#39;/g,"'");
+				var value = value.replace(/&#34;/g,"\"");
+				var tempInput = document.createElement("input");
+				tempInput.style = "position: absolute; left: -1000px; top: -1000px";
+				tempInput.value = value;
+				document.body.appendChild(tempInput);
+				tempInput.select();
+				document.execCommand("copy");
+				document.body.removeChild(tempInput);
+			}
+			$(document).ready(function(){
+				$("td.detail").ready(function(){
+					var val = $("a.tvtrope").attr("id");
+					val = val.replace(/-/g,"");
+					val = val.replace(/\s+/g,"");
+					$("a.tvtrope").attr("href", "http://tvtropes.org/pmwiki/pmwiki.php/Main/" + val);
+				});
+				$("td.detail").ready(function(){
+					var val = $("a.tvtrope1").attr("id");
+					val = val.replace(/-/g,"");
+					val = val.replace(/\s+/g,"");
+					$("a.tvtrope1").attr("href", "http://tvtropes.org/pmwiki/pmwiki.php/Main/" + val);
+				});
+				$("td.detail").ready(function(){
+					var val = $("a.tvtrope2").attr("id");
+					val = val.replace(/-/g,"");
+					val = val.replace(/\s+/g,"");
+					$("a.tvtrope2").attr("href", "http://tvtropes.org/pmwiki/pmwiki.php/Main/" + val);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		
+		<div class="container" align="center">
+
+			<div id="sidebar" align="sidebar">
+				<a href="{{ url_for('static', filename='traits.txt') }}">List of traits</a>
+				<p>
+				<a href="{{ url_for('static', filename='race.txt') }}">List of races and their stat bonuses</a>
+				<p>
+				<a href="mailto:alecedavidson@gmail.com">Contact Alec at alecedavidson@gmail.com</a>
+				<br>
+				<pre>
+				<font color="#aaa">
+				<div id="textHolder">
+   \  |  / ,           ,-`````````'-.
+ `-.\ | /,'           /   <font color="#fff">Kent</font>       `. `. \ |  / ,'
+---       ---        /    _,---''''--.,|  `.\| /,'
+ --,     `-.         |   |. __   . __,(| ---     ---
+ ,' /_\\_\_          |   | '  `   `. `|/   /    `.
+     \  \  `._       |() |,        `. \  /` ,| \  `.
+      \    -' `-.__  \__/ `,  .  _   )|/' \/ |  \
+       `.      -'  `--,/|  '`-'`'_`''-|    \
+        `-._           `|     {`-`}  \     \
+             `-._        \,     ``'  |` ,---'
+                `-.       |         \,-'
+                    |\     `\         \
+                    \ `      \,       \
+                    /          \     |`
+                   |            \,  / \
+                   /              `'  |
+                   |                  |
+                   /                  |
+                  /      _ __    ,   ,'___,
+                 /  _   ' /,-`--'/  ' /   /  <font color="#ddd">Zeus</font>
+                 `-' `--..'-----'----'---'
+				</div>
+				</font></pre>
+			</div>
+			
+			<div id="content" align="center">
+				<!--
+				Generate how many characters?
+				(There are 11 different class options, repeats allowed on parties 12+)
+				-->
+				<form action="/" method="post">
+                    <p>
+					<input type="text" name="party"/>
+                    </p>
+					<table>
+					<td>
+					<div style="width:175px; text-align:left;align:center">
+					<p>
+					Re-Roll Stats under 10?
+					</p>
+					<input type="radio" name="reroll" value="yes" checked> Yes
+					<p>
+					<input type="radio" name="reroll" value="no"> No
+					</div>
+					<!--
+					<td>
+					<div style="width:175px; text-align:left">
+					<p>
+					Roll Fate Core instead?
+					</p>
+					<input type="radio" name="fate" value="yes"> Yes
+					<p>
+					<input type="radio" name="fate" value="no" checked> No
+					</div>
+					</td>
+					-->
+					</table>
+					<br>
+					<button type="submit" name="Randomize" name="GenerateButton">Generate</button>
+					<br>
+					<br>
+					<br>
+				{% with messages = get_flashed_messages() %}
+					{% if messages %}
+						Results:
+						<pre align="left">
+							{% for message in messages %}
+<div align="center">
+<table class="resultstable">
+<tr>
+<!--<td></td>-->
+<td class="detail">{{message[0]['Field']}}
+   {{message[0]['Value']}}</td>
+<!--<td></td>-->
+<td class="stats">{{message[6]['Field']}}
+   {{message[6]['Value']}}</td>
+</tr>
+<tr>
+<!--<td></td>-->
+<td class="detail">{{message[1]['Field']}}
+   {{message[1]['Value']}}</td>
+<!--<td></td>-->
+<td class="stats">{{message[7]['Field']}}
+   {{message[7]['Value']}}</td>
+</tr>
+<tr>
+<!--<td></td>-->
+<td class="detail">{{message[2]['Field']}}
+   {{message[2]['Value']}}</td>
+<!--<td></td>-->
+<td class="stats">{{message[8]['Field']}}
+   {{message[8]['Value']}}</td>
+</tr>
+<tr>
+<!--<td></td>-->
+<td class="detail">{{message[3]['Field']}}
+   <a href="#" class='tvtrope' id="{{message[3]['Value']}}">{{message[3]['Value']}}</a></td>
+<!--<td></td>-->
+<td class="stats">{{message[9]['Field']}}
+   {{message[9]['Value']}}</td>
+</tr>
+<tr>
+<!--<td></td>-->
+<td class="detail">{{message[4]['Field']}}
+   <a href="#" class='tvtrope1' id="{{message[4]['Value']}}">{{message[4]['Value']}}</a></td>
+<!--<td></td>-->
+<td class="stats">{{message[10]['Field']}}
+   {{message[10]['Value']}}</td>
+</tr>
+<tr>
+<!--<td></td>-->
+<td class="detail">{{message[5]['Field']}}
+   {{message[5]['Value']}}</td>
+<!--<td></td>-->
+<td class="stats">{{message[11]['Field']}}
+   {{message[11]['Value']}}</td>
+</tr>
+</table>
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+</div>
+							{% endfor %}
+						</pre>
+					{% endif %}
+				{% endwith %}
+				</form>
+	<!-- The button used to copy the text -->
+				<!--<button id="copyButton" onclick="setClipboard(TextToCopy)">Copy Last Character</button>-->
+			</div>
+			
+			<div id="footer" align="center">
+				<a href="#top">Back to Top</a>
+				<p>
+				This site is not associated with Wizards of the Coast, Dungeons and Dragons, or any of their affiliates.
+				<p>
+			</div>
+			
+		</div>
+	</body>
+</html>
