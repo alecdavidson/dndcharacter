@@ -1,4 +1,4 @@
-99
+90
 All-Loving Hero
 The Antagonist
 Anthropomorphic Personification
@@ -37,7 +37,6 @@ Granny Classic
 The Grotesque
 Herald
 The Hero
-Heroic Archetype
 Heroic Wannabe
 The High Queen
 Higher Self
@@ -50,14 +49,10 @@ The Kirk
 The Klutz
 Knight in Shining Armor
 Lady and Knight
-Loser Archetype
 Lovable Rogue
 Magical Barefooter
 Mary Sue
 The McCoy
-Mentor Archetype
-Messianic Archetype
-Mixed Archetypes
 Mock Millionaire
 Modern Major General
 My Girl Back Home
@@ -74,13 +69,9 @@ Powers That Be
 Prince Charming
 Princess Classic
 The Protagonist
-A Protagonist Shall Lead Them (a.k.a. Leader Archetype)
 Rebel Leader
 Rebellious Spirit
 Reluctant Monster
-Satanic Archetype
-Seeker Archetype
-Shadow Archetype
 Shapeshifter
 Sidekick
 The Sociopath

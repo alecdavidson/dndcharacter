@@ -1,21 +1,22 @@
-7
-Human
-Dwarf
-Elf
-Gnome
-Half-Elf
-Half-Orc
-Halfling
-Turtle
-Skeleton
-Goblin
-Banshee
-Satyr
-Lorosz
-Lycan
-Crystallite
-Avian
-Seafolk
-Ethral
-Changeling
-Bear
+10
+["Human", [1,1,1,1,1,1]]
+["Dwarf", [0,0,2,0,0,0]]
+["Elf", [0,2,0,0,0,0]]
+["Gnome", [0,0,0,2,0,0]]
+["Half-Elf", [0,0,0,0,0,2]]
+["Half-Orc", [2,0,1,0,0,0]]
+["Halfling", [0,2,0,0,0,0]]
+["Goblin", [0,2,1,0,0,0]]
+["Orc", [2,0,1,-2,0,0]]
+["Firbolg", [1,0,0,0,2,0]]
+["Tortle", [2,0,0,0,1,0]]
+["Banshee", []]
+["Satyr", []]
+["Lorosz", []]
+["Lycan", []]
+["Crystallite", []]
+["Avian", []]
+["Seafolk", []]
+["Ethral", []]
+["Changeling", []]
+["Bear", []]

@@ -1,4 +1,4 @@
-1371
+1360
 Abandoned Mascot
 Abandoned War Child
 Abhorrent Admirer
@@ -39,10 +39,7 @@ Ambulance Chaser
 Amnesiac Lover
 Amoral Attorney
 Ancient Keeper
-Angry Black Man
 Annoying Younger Sibling
-Anonymous Benefactor
-Anonymous Ringer
 Antagonistic Offspring
 The Antichrist
 Anti Anti Christ
@@ -60,9 +57,6 @@ Archnemesis Dad
 Arc Villain
 The Artifact
 As Himself
-Asian Airhead
-Asian and Nerdy
-Asian Rudeness
 Asshole Victim
 Audience Surrogate
 Authority in Name Only
@@ -117,15 +111,12 @@ The Big Guy
 Big Man on Campus
 Bit-Part Badguys
 Bitch in Sheep's Clothing
-Black and Nerdy
-Black Best Friend
 Black Magician Girl
 Black Sheep
 Black Shirt
 Blank Slate
 Blind Justice
 Blind Seer
-Blonde Republican Sex Kitten
 Blue-Collar Warlock
 Bob from Accounting
 Body Double
@@ -155,7 +146,6 @@ Broken Ace
 Broken Angel
 Broken Bird
 Bromantic Foil
-Brooklyn Rage
 Bruiser with a Soft Center
 The Brute
 Bubble Boy
@@ -1264,10 +1254,9 @@ Troubled, but Cute
 Tsundere
 Tunnel King
 Turn Coat
-Twofer Token Minority
 Typhoid Mary
 Tyrant Takes the Helm
-Übermensch
+Ubermensch
 The Ugly Guy's Hot Daughter
 Ultimate Authority Mayor
 Ultimate Blacksmith
