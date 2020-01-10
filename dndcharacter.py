@@ -64,7 +64,7 @@ def getClass():
 
 def getAlign(Class):
     Alignment = getRandomLine('alignment.txt')
-    Alignment = checkAlign(Class, Alignment)
+    #Alignment = checkAlign(Class, Alignment)
     return Alignment
 
 def getTrait(type):
