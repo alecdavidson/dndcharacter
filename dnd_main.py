@@ -62,6 +62,22 @@ def reset(fate):
 
 def traitCheck():
 	global traitList, greatSkill, goodSkill, fairSkill, averageSkill, poorSkill
+=======
+	global traitList, trait1, trait2, trait3, highConcept, trouble, greatSkill, goodSkill, fairSkill, averageSkill, poorSkill
+	
+	traitList.append(trait1)
+	
+	while trait2 in traitList:
+		trait2 = dndcharacter.getTrait('trope')
+	traitList.append(trait2)
+	
+	while trait3 in traitList:
+		trait3 = dndcharacter.getTrait('traits')
+	traitList.append(trait3)
+	
+	while highConcept in traitList:
+		highConcept = dndcharacter.getTrait('HighConcepts')
+	traitList.append(highConcept)
 	
 	traitList.append(greatSkill)
 	
