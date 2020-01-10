@@ -2,4 +2,3 @@ Flask==1.0.0
 Jinja2==2.10.1
 Werkzeug==0.15.3
 gunicorn==19.5.0
-python==3.7.6
