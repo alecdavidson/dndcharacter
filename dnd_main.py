@@ -62,7 +62,7 @@ def reset(fate):
 
 def traitCheck():
 	global traitList, greatSkill, goodSkill, fairSkill, averageSkill, poorSkill
-=======
+
 	global traitList, trait1, trait2, trait3, highConcept, trouble, greatSkill, goodSkill, fairSkill, averageSkill, poorSkill
 	
 	traitList.append(trait1)
