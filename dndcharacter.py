@@ -1,6 +1,6 @@
 ##Alec Davidson - Summer 2014
 
-import random, re
+import random, re, ast
 
 def getRandomLine(rsv):
     file_h = open(rsv)
@@ -55,16 +55,16 @@ def checkAlign(Class,Alignment):
     return(Alignment)
 
 def getRace():
-    Race = getRandomLine('race.txt')
+    Race = ast.literal_eval(getRandomLine('race.txt'))
     return Race
 
 def getClass():
-    Class = getRandomLine('class.txt')
+    Class = ast.literal_eval(getRandomLine('class.txt'))
     return Class
 
 def getAlign(Class):
     Alignment = getRandomLine('alignment.txt')
-    Alignment = checkAlign(Class, Alignment)
+    #Alignment = checkAlign(Class, Alignment)
     return Alignment
 
 def getTrait(type):

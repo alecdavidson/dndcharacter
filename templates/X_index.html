@@ -123,10 +123,9 @@
 				Generate how many characters?
 				(There are 11 different class options, repeats allowed on parties 12+)
 				-->
-				How large is the party?
 				<form action="/" method="post">
-					<p>
-					<input type="text" name="party" value='1'/>
+                    <p>
+					<input type="text" name="party"/>
                     </p>
 					<table>
 					<td>
@@ -206,10 +205,10 @@
 <tr>
 <!--<td></td>-->
 <td class="detail">{{message[5]['Field']}}
-   <a href="#" class='tvtrope2' id="{{message[5]['Value']}}">{{message[5]['Value']}}</td>
+   {{message[5]['Value']}}</td>
 <!--<td></td>-->
 <td class="stats">{{message[11]['Field']}}
-   {{message[11]['Value']}}</a></td>
+   {{message[11]['Value']}}</td>
 </tr>
 </table>
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

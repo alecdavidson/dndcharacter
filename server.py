@@ -12,7 +12,7 @@ class View(flask.views.MethodView):
 	def post(self):
 		party = flask.request.form['party']
 		reroll = flask.request.form['reroll']
-		fate = flask.request.form['fate']
+		fate = 'no'#flask.request.form['fate']
 		dnd_main.start(party, reroll, fate)
 		return self.get()
   

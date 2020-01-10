@@ -1,21 +1,56 @@
-7
-Human
-Dwarf
-Elf
-Gnome
-Half-Elf
-Half-Orc
-Halfling
-Turtle
-Skeleton
-Goblin
-Banshee
-Satyr
-Lorosz
-Lycan
-Crystallite
-Avian
-Seafolk
-Ethral
-Changeling
-Bear
+42
+["Race",[Str,Dex,Con,Int,Wis,Cha,]]
+["Aarakocra",[0,2,0,0,1,0,]]
+["Aasimar Protector",[0,0,0,0,1,2,]]
+["Aasimar Scourge",[0,0,1,0,0,2,]]
+["Aasimar Fallen",[1,0,0,0,0,0,]]
+["Bugbear",[2,1,0,0,0,0,]]
+["Changeling",[0,1,0,0,0,1,]]
+["Dragonborn",[2,0,0,0,0,1,]]
+["Dwarf Hill",[0,0,2,0,1,0,]]
+["Dwarf Mountain",[2,0,2,0,0,0,]]
+["Duergar",[1,0,2,0,0,0,]]
+["Drow",[0,2,0,0,0,1,]]
+["Eladrin",[0,2,0,1,0,0,]]
+["Elf High",[0,2,0,1,0,0,]]
+["Elf Wood",[0,2,0,0,1,0,]]
+["Firbolg",[1,0,0,0,2,0,]]
+["Genasi Air",[0,1,2,0,0,0,]]
+["Genasi Earth",[1,0,2,0,0,0,]]
+["Genasi Fire",[0,0,2,1,0,0,]]
+["Genasi Water",[0,0,2,0,1,0,]]
+["Gnome Deep",[0,1,0,2,0,0,]]
+["Gnome Forest",[0,1,0,2,0,0,]]
+["Gnome Rock",[0,0,1,2,0,0,]]
+["Goblin",[0,2,1,0,0,0,]]
+["Goliath",[2,0,1,0,0,0,]]
+["Halfling Lightfoot",[0,2,0,0,0,1,]]
+["Halfling Stout",[0,2,1,0,0,0,]]
+["Half-Elf Wood",[0,0,0,0,0,2,]]
+["Half-Elf Moon/Sun",[0,0,0,0,0,2,]]
+["Half-Elf Drow",[0,0,0,0,0,2,]]
+["Half-Orc",[2,0,1,0,0,0,]]
+["Human",[1,1,1,1,1,1,]]
+["Human Variant",[0,0,0,0,0,0,]]
+["Hobgoblin",[0,0,2,1,0,0,]]
+["Kenku",[0,2,0,0,1,0,]]
+["Kobold",[-2,2,0,0,0,0,]]
+["Lizardfolk",[0,0,2,0,1,0,]]
+["Orc",[2,0,1,-2,0,0,]]
+["Tabaxi",[0,2,0,0,0,1,]]
+["Tiefling Abyssal",[0,0,1,0,0,2,]]
+["Tiefling Infernal",[0,0,0,1,0,2,]]
+["Triton",[1,0,1,0,0,1,]]
+["Warforged",[1,0,1,0,0,0,]]
+
+["Banshee", [0,0,0,0,0,0]]
+["Satyr", [0,0,0,0,0,0]]
+["Lorosz", [0,0,0,0,0,0]]
+["Lycan", [0,0,0,0,0,0]]
+["Crystallite", [0,0,0,0,0,0]]
+["Avian", [0,0,0,0,0,0]]
+["Seafolk", [0,0,0,0,0,0]]
+["Ethral", [0,0,0,0,0,0]]
+["Changeling", [0,0,0,0,0,0]]
+["Bear", [0,0,0,0,0,0]]
+
