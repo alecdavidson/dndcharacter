@@ -1,5 +1,4 @@
 42
-["Race",[Str,Dex,Con,Int,Wis,Cha,]]
 ["Aarakocra",[0,2,0,0,1,0,]]
 ["Aasimar Protector",[0,0,0,0,1,2,]]
 ["Aasimar Scourge",[0,0,1,0,0,2,]]
@@ -27,7 +26,7 @@
 ["Halfling Lightfoot",[0,2,0,0,0,1,]]
 ["Halfling Stout",[0,2,1,0,0,0,]]
 ["Half-Elf Wood",[0,0,0,0,0,2,]]
-["Half-Elf Moon/Sun",[0,0,0,0,0,2,]]
+["Half-Elf High",[0,0,0,0,0,2,]]
 ["Half-Elf Drow",[0,0,0,0,0,2,]]
 ["Half-Orc",[2,0,1,0,0,0,]]
 ["Human",[1,1,1,1,1,1,]]
@@ -42,15 +41,3 @@
 ["Tiefling Infernal",[0,0,0,1,0,2,]]
 ["Triton",[1,0,1,0,0,1,]]
 ["Warforged",[1,0,1,0,0,0,]]
-
-["Banshee", [0,0,0,0,0,0]]
-["Satyr", [0,0,0,0,0,0]]
-["Lorosz", [0,0,0,0,0,0]]
-["Lycan", [0,0,0,0,0,0]]
-["Crystallite", [0,0,0,0,0,0]]
-["Avian", [0,0,0,0,0,0]]
-["Seafolk", [0,0,0,0,0,0]]
-["Ethral", [0,0,0,0,0,0]]
-["Changeling", [0,0,0,0,0,0]]
-["Bear", [0,0,0,0,0,0]]
-
