@@ -12,14 +12,14 @@
 				position:fixed;
 				z-index: 900;
 			}
-			#content { 
+			#content {
 				border:1px solid #fff;
 				width:600px;
 				background: #fff;
 				margin:5px 0 5px 0;
 				z-index: 950;
 			}
-			#footer { 
+			#footer {
 				border:1px solid #fff;
 				width:600px;
 				margin:5px 0 5px 0;
@@ -74,13 +74,13 @@
 					var val = $("a.tvtrope2").attr("id");
 					val = val.replace(/-/g,"");
 					val = val.replace(/\s+/g,"");
-					$("a.tvtrope2").attr("href", "http://tvtropes.org/pmwiki/pmwiki.php/Main/" + val);
+					//$("a.tvtrope2").attr("href", "http://tvtropes.org/pmwiki/pmwiki.php/Main/" + val);
 				});
 			});
 		</script>
 	</head>
 	<body>
-		
+
 		<div class="container" align="center">
 
 			<div id="sidebar" align="sidebar">
@@ -117,7 +117,7 @@
 				</div>
 				</font></pre>
 			</div>
-			
+
 			<div id="content" align="center">
 				<!--
 				Generate how many characters?
@@ -222,14 +222,14 @@
 	<!-- The button used to copy the text -->
 				<!--<button id="copyButton" onclick="setClipboard(TextToCopy)">Copy Last Character</button>-->
 			</div>
-			
+
 			<div id="footer" align="center">
 				<a href="#top">Back to Top</a>
 				<p>
 				This site is not associated with Wizards of the Coast, Dungeons and Dragons, or any of their affiliates.
 				<p>
 			</div>
-			
+
 		</div>
 	</body>
 </html>
