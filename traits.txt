@@ -3,7 +3,8 @@ Heavy Sleeper
 Has Tattoos
 Has Scars
 Heavy Drinker
-Doesn't Get Drunk
+Doesn't Drink
+Can't get Drunk
 Needs Glasses
 Makes Noises When Nervous/Scared
 Can't Swim
@@ -12,22 +13,21 @@ Ugly
 Attractive
 Greedy
 Always Tired
-Horny
+Always in the Mood
 Forgetful
 Rich
 Never Trips
 Iron Stomach
 Easily Impressed
 Daredevil
-Omni-lingual
+Polyglot
 Loves Music
 Finds Everyone Attractive
-Stutters
+Has a Stutter
 Afraid Of Heights
-DM's Choice
 Pessimistic
 Optimistic
-Tells Bad Jokes
+Unfunny
 Romantic
 Night Owl
 Impulsive
@@ -37,65 +37,65 @@ Lazy
 Vane
 Uncomfortable In Most Situations
 Always In A Hurry
-Ambiguous Sexuality
-Needs To Know More
+Ambiguous Features
+Always wants to Know More
 Loves Animals
+Hates Bugs
 Determined
-Uncreative
+Unimaginative
 Afraid Of The Ocean
-Has A Fake Limb
+Has A Prosthetic
 Pacifist
-Flamboyant Clothes
+Wears Flamboyant Clothing
 Star Gazer
 Tries To Save Everyone
-Cannibalistic
+Questionable Tastes
 Superstitious
-Talks In Rhymes
-Mute
+Likes to Speak In Rhymes
+Silent Protagonist
 Issues With Authority
-Obsessed With Dance
+Loves to Dance
 Likes To Knit
-Big "Feet"
 Blind As A Bat
-Dat Booty Doe
-Dense Skeleton
-Headless
+Dense
 High Society
 Kleptomaniac
 Masochist
 Stoner
-One Of Your Limbs Whispers Secrets
 Rude
-Independent (Lone Wolf)
+Lone Wolf
 Graceful
-Necrophiliac
-Light-Sensitive Eyes
+Sensitive
 Heals Quickly
-Fear of Spiders
-DM's Favor
+Afraid of Spiders
 Hates Blood
 Always Hungry
-No Sense Of Humour
+No Sense Of Humor
 Capricious
 Doesn't Like To Be Touched
+Boundary Issues
 Filthy
-Really Long Hair
+Long Hair
 Smooth Talker
-Does Push Ups When Nervous Or Stressed
+Exercises to Cope
 Forgiving
 Obvious Birthmark
 Hoarder
-DM's Disdain
-Eats Money
-Allergic To Animal Hair
-Sneezes When They Lie
-Is A Closet Furry
+No Concept of Money
+Allergic To Animal Fur
+Obvious Liar
 Heterochromia
-Allergic To Metal
+Strange Allergies
 Scared Of The Dark
-Sweats All The Time
-Thinks They Can Talk To Animals
+Sweaty
+Talks To Animals
 No Concept Of Time
 No One Knows If You're Serious/Sarcastic
-Cassandra's Curse
-Never Quits
+Determined
+Mom Friend
+Dad Friend
+Wine Mom
+Vodka Aunt
+Street Smart
+Book Smart
+Gives Great Hugs
