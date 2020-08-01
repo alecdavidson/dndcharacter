@@ -20,7 +20,7 @@ def main(reroll,fate):
 	
 	traitCheck()
 	
-	printChar(fate)
+	return printChar(fate)
 
 def is_number(s):
 	try:
@@ -167,15 +167,21 @@ def printChar(fate):
 		{'Field':"", 'Value':StatListing[5]},
 		{'Field':"", 'Value':align + ', ' + race2 + ' ' + clas[0] + '. ' + trait1 + ', ' + trait2 + ', and ' + trait3 + '.'}]
 	
-	flask.flash(Details)
-	
+	if fate=="local":
+		return Details
+	else:
+		flask.flash(Details)
+
 	classList.append(clas)
+
 	
 	#if len(classList)%classCount == 0:
 	#	classList = []
 
-def start(party, reroll, fate):
+def start(party=1, reroll="yes", fate="local"):
 	global race3
+
+	#print(party+" "+reroll+" "+fate)
 
 	if is_number(party):
 		party = int(party)
@@ -189,6 +195,22 @@ def start(party, reroll, fate):
 	race3 = "none"
 	for i in range(int(party)):
 		main(reroll,fate)
+
+def localstart(party=1, reroll="yes", fate=0):
+	global race3
+	
+	if is_number(party):
+		party = int(party)
+	else:
+		race3 = "none"
+		party = 1
+	
+	if party < 0:
+		party = abs(party)
+		
+	race3 = "none"
+	
+	return main(reroll,fate)
 
 										# This asks for the size of the party
 #party = raw_input("Generate how many characters? (There are "+str(classCount)+" different class options)\n")
