@@ -19,7 +19,7 @@ def generate_char():
 	for i in range(is_number(party.get())):
 	#	dnd_main.localstart("1", reroll.get(), "local")
 		character = dnd_main.localstart("1", reroll.get(), "local")
-		character_return += f"{character[0]['Value']}, {character[1]['Value']}, {character[2]['Value']}\nYour Stats are:\n{character[6]['Value']}\n{character[7]['Value']}\n{character[8]['Value']}\n{character[9]['Value']}\n{character[10]['Value']}\n{character[11]['Value']}\n~~~~~~~~~~\n"
+		character_return += f"{character[0]['Value']}, {character[1]['Value']}, {character[2]['Value']}\nYour Stats are:\n{character[6]['Value']}\n{character[7]['Value']}\n{character[8]['Value']}\n{character[9]['Value']}\n{character[10]['Value']}\n{character[11]['Value']}\nTraits include '{character[3]['Value']}' and '{character[4]['Value']}'\n~~~~~~~~~~\n"
 	output.insert(END,character_return)
 
 ##Establish Variables
