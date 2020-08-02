@@ -1,25 +1,29 @@
 ##Alec Davidson - Summer 2014
 
-import random, re, ast
+import random, re, ast, pathlib
+
+path = pathlib.Path(__file__).parent.absolute()
 
 def getRandomLine(rsv):
-    file_h = open(rsv)
+    global path
+
+    file_h = open(f"{path}\{rsv}")
     limit = file_h.readline()
     limit = limit.replace('\n', '' )
     limit = int(limit)
     line = random.randint(0, limit - 1)
-    
+
     for x in range(line):
         file_h.readline()
     phrase = file_h.readline()
     phrase = phrase.replace('\n', '')
-    
+
     return(phrase)
 
 def classCount():
     file_h = open('class.txt')
     count = file_h.readline()
-    
+
     return int(count)
 
 def bardbarianCheck(Alignment):
@@ -51,7 +55,7 @@ def checkAlign(Class,Alignment):
         Alignment = druidCheck(Alignment)
     elif Class == 'Monk':
         Alignment = monkCheck(Alignment)
-    
+
     return(Alignment)
 
 def getRace():
@@ -69,5 +73,5 @@ def getAlign(Class):
 
 def getTrait(type):
     trait = getRandomLine(type + '.txt')
-    
+
     return trait
