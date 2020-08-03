@@ -21,7 +21,7 @@ def getRandomLine(rsv):
     return(phrase)
 
 def classCount():
-    file_h = open('class.txt')
+    file_h = open(f"{path}\class.txt")
     count = file_h.readline()
 
     return int(count)
