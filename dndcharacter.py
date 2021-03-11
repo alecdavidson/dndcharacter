@@ -8,7 +8,7 @@ path = os.getcwd()
 def getRandomLine(rsv):
     global path
 
-    file_h = open(f"{path}\{rsv}")
+    file_h = open(f"{rsv}")
     limit = file_h.readline()
     limit = limit.replace('\n', '' )
     limit = int(limit)
