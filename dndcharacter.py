@@ -1,8 +1,9 @@
 ##Alec Davidson - Summer 2014
 
-import random, re, ast, pathlib
+import random, re, ast, pathlib, os
 
-path = pathlib.Path(__file__).parent.absolute()
+#path = pathlib.Path(__file__).parent.absolute()
+path = os.getcwd()
 
 def getRandomLine(rsv):
     global path
