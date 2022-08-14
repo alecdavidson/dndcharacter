@@ -1,0 +1,33 @@
+# Don't track content of these folders
+Include/
+Lib/
+Scripts/
+build/*
+resources/*
+civilizations/*
+
+# Don't track these files
+pyvenv.cfg
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.o
+*.so
+*.pyc
+*.bak
+*.bat
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
